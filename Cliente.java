@@ -1,29 +1,19 @@
 package model;
 
 public class Cliente {
-
-    private int id;
-    private String nome;
-    private String telefone;
-
-    public Cliente(int id,
-            String nome,
-            String telefone) {
-
+    
+    public int id;
+    public String nome;
+    
+    public Cliente(int id, String nome) {
         this.id = id;
         this.nome = nome;
-        this.telefone = telefone;
+    }
+    
+    @Override
+    public String toString() {
+        return id + "_" + nome;
     }
 
-    public int getId() {
-        return id;
-    }
 
-    public String getNome() {
-        return nome;
-    }
-
-    public String getTelefone() {
-        return telefone;
-    }
 }
