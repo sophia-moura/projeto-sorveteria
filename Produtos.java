@@ -1,55 +1,21 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
 
-package com.ucb.poo.sorveteria;
+package com.mycompany.produtos;
 
-import java.util.Scanner;
-        
 public class Produtos {
-    
-    static Scanner sc = new Scanner(System.in);
+    protected String nome;
+    protected double preco;
 
-    public static void menuProdutos() {
-
-        int opcao;
-
-        do {
-
-            System.out.println("\n===== PRODUTOS =====");
-            System.out.println("1 - Cadastrar");
-            System.out.println("2 - Listar");
-            System.out.println("3 - Atualizar");
-            System.out.println("4 - Remover");
-            System.out.println("0 - Voltar");
-
-            opcao = sc.nextInt();
-
-            switch (opcao) {
-
-                case 1:
-                    System.out.println("Produto cadastrado!");
-                    break;
-
-                case 2:
-                    System.out.println("Lista de produtos!");
-                    break;
-
-                case 3:
-                    System.out.println("Produto atualizado!");
-                    break;
-
-                case 4:
-                    System.out.println("Produto removido!");
-                    break;
-
-                case 0:
-                    System.out.println("Voltando...");
-                    break;
-
-                default:
-                    System.out.println("Opção inválida!");
-            }
-
-        } while (opcao != 0);
-
+    public Produtos(String nome, double preco) {
+        this.nome = nome;
+        this.preco = preco;
     }
 
+    public String getNome() { return nome; }
+    public void setNome(String nome) { this.nome = nome; }
+
+    public double getPreco() { return preco; }
+    public void setPreco(double preco) { this.preco = preco; }
 }
