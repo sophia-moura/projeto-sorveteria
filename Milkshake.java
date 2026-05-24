@@ -1,6 +1,6 @@
 package model;
 
-public class Milkshake extends Produtos {
+public class Milkshake extends Produto {
 
     private int ml;
 
