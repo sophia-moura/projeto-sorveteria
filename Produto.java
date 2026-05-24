@@ -3,10 +3,11 @@ package model;
 public class Produto {
 
     private int id;
-    private String nome;
+    public String nome;
     private String tipo;
-    private double preco;
-    private int estoque;
+    public double preco;
+    public int estoque;
+    public int venda;
 
     public Produto(int id, String nome,
             String tipo, double preco, int estoque) {
@@ -16,6 +17,7 @@ public class Produto {
         this.tipo = tipo;
         this.preco = preco;
         this.estoque = estoque;
+        this.venda = 0;
     }
 
     public int getId() {
@@ -52,5 +54,13 @@ public class Produto {
 
     public void setEstoque(int estoque) {
         this.estoque = estoque;
+    }
+    
+    public int getVenda(){
+        return venda;
+    }
+    
+    public void setVenda(int venda){
+        this.venda = venda;
     }
 }
