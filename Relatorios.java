@@ -1,53 +1,51 @@
-
 package com.ucb.poo.sorveteria;
+
+import controle.RelatorioControle;
 
 import java.util.Scanner;
 
 public class Relatorios {
-   
+
     static Scanner sc = new Scanner(System.in);
+    static RelatorioControle controle = new RelatorioControle();
 
     public static void menuRelatorios() {
 
         int opcao;
 
         do {
-
-            System.out.println("\n===== RELATÓRIOS =====");
-            System.out.println("1 - Produtos mais vendidos");
-            System.out.println("2 - Total de vendas do dia");
+            System.out.println("\n===== RELATORIOS =====");
+            System.out.println("1 - Total de vendas por produto");
+            System.out.println("2 - Faturamento total");
             System.out.println("3 - Pedidos realizados");
             System.out.println("4 - Clientes cadastrados");
             System.out.println("5 - Produtos sem estoque");
-            System.out.println("6 - Faturamento total");
             System.out.println("0 - Voltar");
+            System.out.print("Opcao: ");
 
             opcao = sc.nextInt();
+            sc.nextLine();
 
             switch (opcao) {
 
                 case 1:
-                    System.out.println("Produtos mais vendidos!");
+                    controle.totalDeVendas();
                     break;
 
                 case 2:
-                    System.out.println("Total de vendas do dia!");
+                    controle.faturamentoTotal();
                     break;
 
                 case 3:
-                    System.out.println("Pedidos realizados!");
+                    controle.pedidosRealizados();
                     break;
 
                 case 4:
-                    System.out.println("Clientes cadastrados!");
+                    controle.clientesCadastrados();
                     break;
 
                 case 5:
-                    System.out.println("Produtos sem estoque!");
-                    break;
-
-                case 6:
-                    System.out.println("Faturamento total!");
+                    controle.produtosSemEstoque();
                     break;
 
                 case 0:
@@ -55,13 +53,9 @@ public class Relatorios {
                     break;
 
                 default:
-                    System.out.println("Opção inválida!");
+                    System.out.println("Opcao invalida!");
             }
 
         } while (opcao != 0);
-
     }
-
 }
-    
-
