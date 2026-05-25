@@ -2,18 +2,25 @@ package model;
 
 public class Cliente {
 
-    public int id;
-    public String nome;
+private int id;
+private String nome;
+private String telefone;
 
-    public Cliente(int id, String nome) {
+public Cliente(int id, String nome, String telefone) {
+this.id = id;
+this.nome = nome;
+this.telefone = telefone;
+}
 
-        this.id = id;
-        this.nome = nome;
-    }
+public int getId() { return id; }
+public String getNome() { return nome; }
+public String getTelefone() { return telefone; }
 
-    @Override
-    public String toString() {
+public void setNome(String nome) { this.nome = nome; }
+public void setTelefone(String telefone) { this.telefone = telefone; }
 
-        return id + " - " + nome;
-    }
+@Override
+public String toString() {
+return id + " | " + nome + " | " + telefone;
+}
 }
